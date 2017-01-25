@@ -1,0 +1,13 @@
+c FILE: test0.cnf
+c
+c SOURCE: Emanuel Gitterle
+c
+c Just a small CNF for testing
+c
+p cnf 4 5
+-1 -2 0
+2 3 0
+-1 -3 4 0
+2 -3 -4 0
+1 4 0
+
