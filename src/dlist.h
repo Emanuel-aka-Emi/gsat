@@ -18,14 +18,15 @@ struct dlist{
 };
 
 /**
- *    create
- */ 
+ *    create_dlist    creates the list structs the functions can work on. 
+ */
+
 dlist* create_dlist(void);
 
-/**
- *    initialize list
- */ 
-int initialize_dlist(dlist *list, void *data);
+/*
+ *    insert first element if the list is empty
+ */
+int insert_first_element(dlist *list, void *data);
 
 /*
  *    is Empty

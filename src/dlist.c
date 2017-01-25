@@ -19,8 +19,8 @@ dlist* create_dlist(void){
     }
 }
 
-//initialize list
-int initialize_dlist(dlist *list, void *data){
+//inserts first element if the list is empty list
+int insert_first_element(dlist *list, void *data){
     node *new_node;
     if((new_node = malloc(sizeof(*new_node))) != NULL){
 	new_node->data = data;
@@ -69,6 +69,9 @@ void print_dlist(dlist *list){
 
 //prepend element
 int prepend(dlist *list, void *data){
+    if(is_empty(list))
+	return insert_first_element(list, data);
+
     node *new_node;
     if((new_node = malloc(sizeof(*new_node))) != NULL){
 	new_node->data = data;
@@ -84,6 +87,9 @@ int prepend(dlist *list, void *data){
 
 //append element
 int append(dlist *list, void *data){
+    if(is_empty(list))
+	return insert_first_element(list, data);
+
     node *new_node;
     if((new_node = malloc(sizeof(*new_node))) != NULL){
 	new_node->data = data;
@@ -101,6 +107,9 @@ int append(dlist *list, void *data){
 
 //insert element at index
 int insert(dlist *list, void *data, int index){
+    if(is_empty(list))
+	return insert_first_element(list, data);
+
     node *new_node;
     if((new_node = malloc(sizeof(*new_node))) != NULL){
 	if(index == 0){
