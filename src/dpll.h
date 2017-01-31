@@ -2,6 +2,37 @@
 #ifndef DPLL_H
 #define DPLL_H
 
-int testfunction(void);
+/**
+ * Decide
+ */
+
+/**
+ * Unit Propagation
+ */
+
+/**
+ * Conflict
+ */
+
+/**
+ * Explain
+ */
+
+/**
+ * Learn
+ */
+
+/**
+ * Backjump
+ */
+
+/**
+ * Forget
+ */
+
+/**
+ * Restart
+ */
+
 
 #endif

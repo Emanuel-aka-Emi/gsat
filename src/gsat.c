@@ -15,50 +15,37 @@
 #include "dlist.h"
 
 int main(int argc, char** argv){
-    
+           
     /**
      *    Inform user about the program if no argument is given
      */
     if(argc < 2)
-	print_instruction();
+ 	print_instruction();
    
-   /**
-    *    Open DIMACS file
-    */ 
-   FILE *file = fopen(argv[1], "r");
+    /**
+     *    Open DIMACS file
+     */ 
+    FILE *file = fopen(argv[1], "r");
 
-   if(file == NULL){
-       printf("Error: File not found\n");
-       printf("Exiting now...\n");
-       exit(EXIT_FAILURE);
-   }
+    if(file == NULL){
+        printf("Error: File not found\n");
+        printf("Exiting now...\n");
+        exit(EXIT_FAILURE);
+    }  
 
-/*	for debugging,    visualises the input file
-   char c;
-   if(file){
-       while((c = getc(file)) != EOF)
-	   putchar(c);
-   }
-*/
+    /*
+     *    Create doubly linked list to store tupl from file
+     */ 
+    dlist *list = create_dlist();
 
-
-/*
- * START dlist TEST
- */
-dlist* list = create_dlist();
-
-int a[] = {1,  2, 3};
-int b[] = {-2, 3, 0};
-int c[] = {-1, -3, 0};
-prepend(list, a);
-prepend(list, b);
-prepend(list, c);
-
-print_dlist(list); 
-
-/*
- * END dlist TEST
- */ 
+    /*
+     *    Read file
+     */ 
+    char c:
+    char *tupl;
+    while((c=getc(file) != EOF){
+        //code
+    }
 
     fclose(file);
     exit(EXIT_SUCCESS);
